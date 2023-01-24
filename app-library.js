@@ -11,17 +11,14 @@
 // console.log(shortid.generate());
 
 // 3ю создание хоста для веб-сервера - localhost:4444 - прописываю в браузере - серве будет жить на этом хосте
-const express = require("express")
+const express = require('express');
 const app = express();
 
 app.use('*', (req, res) => {
-console. log('3anpoc от браузера');
-res.send('<h1>ЭТО МОЙ ЗАПРОС</h1>!');
-})
-
+  console.log('3anpoc от браузера');
+  res.send('<h1>ЭТО МОЙ ЗАПРОС</h1>!');
+});
 
 const listener = app.listen(4444, () => {
-	console.log("Веб-сервер запущен на порте ${listener.address().port}");
-})
-
-
+  console.log('Веб-сервер запущен на порте ${listener.address().port}');
+});
